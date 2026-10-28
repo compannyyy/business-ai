@@ -2,100 +2,271 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Xmind:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Бизнес-Идея AI — помощник малого бизнеса</title>
-<style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#202b4c">
+  <title>Бизнес-Идея AI — помощник малого бизнеса</title>
 
-.xmind-<uniquifier> {
-  font-family: "Xmind", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-:root {
-  --ink: #17233b;
-  --muted: #62708a;
-  --paper: #f5f7fb;
-  --card: #fff;
-  --accent: #5b5ce2;
-  --line: #e1e6f0;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: linear-gradient(135deg, #f3f5ff, #f8fbff);
-  font: 16px/1.5;
-  color: var(--ink);
-  font-family: "Xmind", sans-serif;
-}
-main { max-width: 980px; margin: 36px auto; padding: 0 18px; }
-.hero {
-  padding: 28px; border-radius: 24px;
-  background: #202b4c; color: white;
-}
-.eyebrow {
-  font-size: 12px; text-transform: uppercase;
-  letter-spacing: .13em; color: #c5caff; font-weight: 800;
-}
-h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; }
-.hero p { max-width: 650px; color: #e1e6ff; }
-.pill {
-  display: inline-block; background: #e9eaff; color: #3436a5;
-  border-radius: 999px; padding: 5px 10px;
-  font-size: 12px; font-weight: 800; margin-bottom: 12px;
-}
-.layout {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 18px; margin-top: 18px;
-}
-.card {
-  background: var(--card); border: 1px solid var(--line);
-  border-radius: 20px; padding: 22px;
-  box-shadow: 0 10px 30px #24345b0b;
-}
-h2 { font-size: 20px; margin: 0 0 14px; }
-label { display: block; font-weight: 700; font-size: 14px; margin: 14px 0 6px; }
-input, select, textarea {
-  width: 100%; border: 1px solid #d6ddec; border-radius: 12px;
-  padding: 12px; font: inherit; color: var(--ink); background: white;
-}
-textarea { min-height: 94px; resize: vertical; }
-button {
-  border: 0; border-radius: 12px; padding: 12px 16px;
-  font: inherit; font-weight: 800; cursor: pointer;
-}
-.primary { background: var(--accent); color: white; width: 100%; margin-top: 16px; }
-.secondary { background: #eef0ff; color: #3436a5; }
-.output {
-  white-space: pre-wrap; background: #f7f8fc;
-  border: 1px dashed #cbd3e5; border-radius: 14px;
-  padding: 14px; min-height: 190px; color: #27334d;
-}
-.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-.small { font-size: 13px; color: var(--muted); }
-.steps {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 10px; margin-top: 18px;
-}
-.step { background: white; border: 1px solid var(--line); border-radius: 15px; padding: 14px; }
-.step b { display: block; margin-bottom: 5px; }
-footer { text-align: center; color: var(--muted); font-size: 12px; margin: 22px 0; }
-@media (max-width: 720px) {
-  .layout, .steps { grid-template-columns: 1fr; }
-  .hero { padding: 22px; }
-}
-</style>
+  <!-- Подключение шрифта Xmind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Xmind:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #17233b;
+      --muted: #62708a;
+      --paper: #f5f7fb;
+      --card: #ffffff;
+      --accent: #5b5ce2;
+      --line: #e1e6f0;
+      --dark: #202b4c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #f3f5ff, #f8fbff);
+      font-family: "Xmind", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: "Xmind", sans-serif;
+      font-optical-sizing: auto;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 36px auto;
+      padding: 0 18px;
+    }
+
+    .hero {
+      padding: 30px;
+      border-radius: 24px;
+      background: var(--dark);
+      color: white;
+      box-shadow: 0 16px 40px #202b4c20;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: #c5caff;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 18px 0 14px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #e1e6ff;
+      margin-bottom: 0;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #e9eaff;
+      color: #3436a5;
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 10px 30px #24345b0b;
+      min-width: 0;
+    }
+
+    h2 {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      margin: 15px 0 6px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #d6ddec;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--ink);
+      background: white;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px #5b5ce21c;
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .15s, opacity .15s;
+    }
+
+    button:hover {
+      opacity: .9;
+    }
+
+    button:active {
+      transform: scale(.98);
+    }
+
+    .primary {
+      background: var(--accent);
+      color: white;
+      width: 100%;
+      margin-top: 16px;
+      padding: 14px;
+    }
+
+    .secondary {
+      background: #eef0ff;
+      color: #3436a5;
+    }
+
+    .output {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      background: #f7f8fc;
+      border: 1px dashed #cbd3e5;
+      border-radius: 14px;
+      padding: 14px;
+      min-height: 190px;
+      color: #27334d;
+      font-size: 14px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .small {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 16px;
+    }
+
+    .step b {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        margin: 18px auto;
+        padding: 0 12px;
+      }
+
+      .layout,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 23px;
+        border-radius: 20px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 <main>
   <section class="hero">
-    <div class="eyebrow">Практический AI-инструмент для предпринимателя</div>
+    <div class="eyebrow">AI-инструмент для предпринимателя</div>
     <h1>Бизнес-Идея AI</h1>
-    <p>Соберите за минуту понятное задание для ИИ: придумайте рекламный пост, ответ клиенту или идеи для продвижения небольшого бизнеса.</p>
+    <p>
+      Ваш цифровой помощник для малого бизнеса.
+      Придумывайте рекламные идеи, создавайте тексты
+      и улучшайте общение с клиентами с помощью ИИ.
+    </p>
   </section>
 
   <section class="layout">
@@ -113,17 +284,17 @@ footer { text-align: center; color: var(--muted); font-size: 12px; margin: 22px 
         <option>Другое небольшое предприятие</option>
       </select>
 
-      <label for="task">Задача</label>
+      <label for="task">Выберите задачу</label>
       <select id="task">
-        <option value="post">Написать пост для социальных сетей</option>
-        <option value="reply">Ответить на вопрос клиента</option>
-        <option value="ideas">Предложить идеи для привлечения клиентов</option>
-        <option value="reviews">Проанализировать отзывы клиентов</option>
-        <option value="plan">Составить простой план продвижения на неделю</option>
+        <option value="post">Пост для социальных сетей</option>
+        <option value="reply">Ответ клиенту</option>
+        <option value="ideas">Идеи для привлечения клиентов</option>
+        <option value="reviews">Анализ отзывов</option>
+        <option value="plan">План продвижения на неделю</option>
       </select>
 
-      <label for="details">Опишите товар, услугу или ситуацию</label>
-      <textarea id="details" placeholder="Например: домашняя выпечка, доставка по Минску, скидка на наборы по пятницам"></textarea>
+      <label for="details">Расскажите о своей ситуации</label>
+      <textarea id="details" placeholder="Например: небольшая пекарня в Минске, домашняя выпечка, доставка по городу..."></textarea>
 
       <label for="tone">Стиль общения</label>
       <select id="tone">
@@ -132,90 +303,124 @@ footer { text-align: center; color: var(--muted); font-size: 12px; margin: 22px 
         <option>Креативный и энергичный</option>
       </select>
 
-      <button class="primary" id="make">Создать задание для ИИ</button>
+      <button class="primary" id="make">
+        ✨ Создать задание для ИИ
+      </button>
     </div>
 
     <div class="card">
-      <span class="pill">ШАГ 2 · ГОТОВЫЙ РЕЗУЛЬТАТ</span>
+      <span class="pill">ШАГ 2 · РЕЗУЛЬТАТ</span>
       <h2>Ваш AI-запрос</h2>
-      <div id="output" class="output" aria-live="polite">Заполните поля слева и нажмите «Создать задание для ИИ». Приложение подготовит запрос, который можно отправить в выбранный ИИ-сервис.</div>
+
+      <div id="output" class="output" aria-live="polite">Заполните поля слева и нажмите кнопку. Здесь появится готовый запрос для ИИ-сервиса.</div>
+
       <div class="actions">
         <button class="secondary" id="copy">Скопировать запрос</button>
         <button class="secondary" id="reset">Очистить</button>
       </div>
-      <p class="small">Демонстрационный прототип: запрос формируется прямо в браузере. Для автоматической генерации ответов потребуется подключить API ИИ-сервиса.</p>
+
+      <p class="small">
+        Прототип формирует запрос в браузере.
+        Для автоматической генерации ответов необходимо подключение к ИИ-сервису.
+      </p>
     </div>
   </section>
 
   <section class="steps">
     <div class="step">
-      <b>1. Экономит время</b>
-      <span class="small">Помогает быстро формулировать рабочие запросы.</span>
+      <b>⏱ Экономия времени</b>
+      <span class="small">Быстрая подготовка текстов и рабочих идей.</span>
     </div>
+
     <div class="step">
-      <b>2. Не требует сложной настройки</b>
-      <span class="small">Подходит для тестирования идеи без базы данных.</span>
+      <b>💡 Простота использования</b>
+      <span class="small">Не нужно самостоятельно составлять сложные запросы.</span>
     </div>
+
     <div class="step">
-      <b>3. Оставляет контроль человеку</b>
-      <span class="small">Проверяйте факты, цены и обещания перед публикацией.</span>
+      <b>🎯 Контроль результата</b>
+      <span class="small">Вы проверяете и утверждаете результат перед публикацией.</span>
     </div>
   </section>
 
-  <footer>Учебный прототип для демонстрации применения ИИ в малом бизнесе. Не отправляйте в запросы пароли и персональные данные клиентов.</footer>
+  <footer>
+    Учебный прототип для малого бизнеса.
+    Не вводите пароли и конфиденциальные данные клиентов.
+  </footer>
 </main>
 
 <script>
-const $ = id => document.getElementById(id);
+  const $ = id => document.getElementById(id);
 
-function makePrompt() {
-  const type = $('type').value;
-  const details = $('details').value.trim() ||
-    'Предложи универсальный вариант и укажи, какие данные нужно уточнить';
-  const tone = $('tone').value;
+  function makePrompt() {
+    const type = $('type').value;
+    const details = $('details').value.trim() ||
+      'Предложи универсальный вариант и укажи, какие данные нужно уточнить';
+    const tone = $('tone').value;
 
-  const tasks = {
-    post: 'Подготовь короткий пост для социальных сетей с понятным заголовком, выгодой для клиента и мягким призывом к действию. Не выдумывай цены, скидки и факты.',
-    reply: 'Составь вежливый и понятный ответ клиенту. Если информации недостаточно, задай уточняющий вопрос и не придумывай условия компании.',
-    ideas: 'Предложи 5 реалистичных идей для привлечения клиентов с небольшим бюджетом. Для каждой укажи первый шаг и способ измерить результат.',
-    reviews: 'Сгруппируй отзывы по основным темам: что нравится клиентам, что вызывает недовольство и что можно улучшить. Не делай выводов, которых нет в данных.',
-    plan: 'Составь простой план продвижения на 7 дней. Для каждого дня укажи действие, примерный результат и показатель, по которому можно оценить успех.'
-  };
+    const tasks = {
+      post:
+        'Подготовь короткий пост для социальных сетей с интересным заголовком, пользой для клиента и призывом к действию. Не выдумывай цены и скидки.',
+      reply:
+        'Составь вежливый и понятный ответ клиенту. Если информации недостаточно, задай уточняющий вопрос.',
+      ideas:
+        'Предложи 5 реалистичных идей для привлечения клиентов с небольшим бюджетом. Для каждой укажи первый шаг и способ оценить результат.',
+      reviews:
+        'Проанализируй предоставленные отзывы: выдели сильные стороны, частые проблемы и возможные улучшения. Не придумывай отсутствующие факты.',
+      plan:
+        'Составь план продвижения на 7 дней. Для каждого дня укажи действие, цель и показатель эффективности.'
+    };
 
-  $('output').textContent =
-    `Ты — практичный помощник малого бизнеса.\n` +
-    `Тип бизнеса: ${type}.\n` +
-    `Задача: ${tasks[$('task').value]}\n` +
-    `Контекст: ${details}\n` +
-    `Стиль: ${tone}.\n\n` +
-    `Ответ дай простым русским языком, без неподтверждённых обещаний. Если данных не хватает, обозначь предположения и задай уточняющие вопросы.`;
-}
-
-$('make').addEventListener('click', makePrompt);
-
-$('copy').addEventListener('click', async () => {
-  const text = $('output').textContent;
-  try {
-    await navigator.clipboard.writeText(text);
-    $('copy').textContent = 'Скопировано!';
-  } catch (e) {
-    const range = document.createRange();
-    range.selectNodeContents($('output'));
-    const sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-    $('copy').textContent = 'Выделите и скопируйте';
+    $('output').textContent =
+      'Ты — практичный помощник малого бизнеса.\n\n' +
+      'Тип бизнеса: ' + type + '.\n\n' +
+      'Задача: ' + tasks[$('task').value] + '\n\n' +
+      'Контекст: ' + details + '\n\n' +
+      'Стиль общения: ' + tone + '.\n\n' +
+      'Отвечай простым русским языком. Предлагай конкретные действия, ' +
+      'не придумывай факты и обещания. Если информации недостаточно, ' +
+      'обозначь предположения и задай уточняющие вопросы.';
   }
-  setTimeout(() => $('copy').textContent = 'Скопировать запрос', 1800);
-});
 
-$('reset').addEventListener('click', () => {
-  $('details').value = '';
-  $('type').selectedIndex = 0;
-  $('task').selectedIndex = 0;
-  $('tone').selectedIndex = 0;
-  $('output').textContent = 'Заполните поля слева и нажмите «Создать задание для ИИ». Приложение подготовит запрос, который можно отправить в выбранный ИИ-сервис.';
-});
+  $('make').addEventListener('click', makePrompt);
+
+  $('copy').addEventListener('click', async () => {
+    const text = $('output').textContent;
+    const button = $('copy');
+
+    try {
+      await navigator.clipboard.writeText(text);
+      button.textContent = 'Скопировано!';
+    } catch (error) {
+      const area = document.createElement('textarea');
+      area.value = text;
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+
+      const success = document.execCommand('copy');
+      area.remove();
+
+      button.textContent = success
+        ? 'Скопировано!'
+        : 'Выделите текст вручную';
+    }
+
+    setTimeout(() => {
+      button.textContent = 'Скопировать запрос';
+    }, 1800);
+  });
+
+  $('reset').addEventListener('click', () => {
+    $('details').value = '';
+    $('type').selectedIndex = 0;
+    $('task').selectedIndex = 0;
+    $('tone').selectedIndex = 0;
+
+    $('output').textContent =
+      'Заполните поля слева и нажмите кнопку. Здесь появится готовый запрос для ИИ-сервиса.';
+  });
 </script>
 </body>
 </html>
